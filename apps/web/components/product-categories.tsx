@@ -29,13 +29,13 @@ export function ProductCategories() {
   return (
     <section>
       {/* Dark section */}
-      <div className="bg-[#24272c] pt-24 pb-16 relative">
+      <div className="bg-[#24272c] pt-8 md:pt-24 pb-16 relative">
         <div className="absolute top-0 left-0 w-full h-16 bg-red-700/20" style={{ backgroundImage: 'url("/background-1-1.png")', backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.3 }} />
         <Shell>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8">
             {categories.map((cat) => (
               <Link href={`/products/${cat.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} key={cat.id} className="flex flex-col items-center text-center group cursor-pointer">
-                <div className="relative -mt-32 mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-[#1877f2] border-[8px] border-[#1f2328] text-2xl font-bold text-white shadow-lg z-10 group-hover:scale-110 transition-transform duration-300">
+                <div className="relative mb-6 flex h-20 w-20 md:-mt-16 lg:-mt-20 items-center justify-center rounded-full bg-[#1877f2] border-[8px] border-[#1f2328] text-2xl font-bold text-white shadow-lg z-10 group-hover:scale-110 transition-transform duration-300">
                   {cat.id}
                 </div>
                 <h3 className="mb-4 text-xl font-bold text-white group-hover:text-[#1877f2] transition-colors">{cat.title}</h3>

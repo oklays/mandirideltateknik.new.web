@@ -48,10 +48,10 @@ export default async function HomePage() {
               <p className="text-xs font-semibold uppercase tracking-[0.32em] text-cta">
                 Solusi Pompa Air Terpercaya
               </p>
-              <h1 className="max-w-4xl font-display text-6xl uppercase leading-none tracking-[0.04em] text-white md:text-8xl">
+              <h1 className="max-w-4xl font-display text-4xl uppercase leading-tight tracking-[0.04em] text-white sm:text-5xl md:text-8xl">
                 {settings.hero_title}
               </h1>
-              <p className="max-w-2xl text-base leading-8 text-blue-100 md:text-lg">
+              <p className="max-w-2xl text-base leading-7 text-blue-100 overflow-hidden md:text-lg md:leading-8">
                 {settings.hero_subtitle}
               </p>
             </div>
