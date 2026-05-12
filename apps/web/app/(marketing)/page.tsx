@@ -14,9 +14,40 @@ const proofPoints = [
 ];
 
 const portfolioHighlights = [
-  "Penguatan sistem pompa gedung komersial",
-  "Peremajaan fire pump dan panel hydrant",
-  "Servis pompa utilitas untuk fasilitas industri"
+  {
+    title: "Penguatan Sistem Pompa Gedung Komersial",
+    client: "Gedung Komersial (Jakarta)",
+    problem: "Pompa booster existing sering over-heat dan tekanan tidak stabil di lantai atas.",
+    solution: "Penggantian dengan Vertical Multistage Pump + panel VSD untuk efisiensi energi.",
+    result: "Tekanan air stabil 24/7 dan penghematan konsumsi listrik pompa hingga 30%."
+  },
+  {
+    title: "Peremajaan Fire Pump dan Panel Hydrant",
+    client: "Kawasan Pabrik Manufaktur (Cikarang)",
+    problem: "Diesel fire pump sulit distarter otomatis dan panel alarm tidak responsif.",
+    solution: "Overhaul total diesel pump, penggantian modul kontrol AMF, dan kalibrasi pressure switch.",
+    result: "Sistem hydrant kembali lulus uji pressure test dan siap beroperasi otomatis."
+  },
+  {
+    title: "Instalasi Submersible Sewage Pump",
+    client: "Fasilitas IPAL Industri (Bekasi)",
+    problem: "Pompa air limbah existing sering macet akibat material padat.",
+    solution: "Suplai dan instalasi Heavy Duty Submersible Pump tipe cutter/grinder.",
+    result: "Proses transfer limbah lancar tanpa insiden clogging selama 1 tahun terakhir."
+  }
+];
+
+const whyChooseUs = [
+  "Berpengalaman sejak 2009",
+  "Dukungan sales engineering",
+  "Multi-brand pump supplier",
+  "Siap membantu sizing awal",
+  "Dukungan end-to-end (Suplai, Instalasi, Servis)",
+  "Respons teknis cepat"
+];
+
+const trustedSectors = [
+  "Gedung Komersial", "Pabrik Manufaktur", "Kawasan Industri", "Hotel & Apartemen", "Rumah Sakit", "Logistik & Warehouse"
 ];
 
 export default async function HomePage() {
@@ -59,9 +90,9 @@ export default async function HomePage() {
             <div className="flex flex-col gap-4 sm:flex-row">
               <Link
                 className="inline-flex h-14 items-center justify-center rounded-lg bg-cta px-6 text-base font-medium uppercase tracking-[0.08em] text-bms-primary shadow-glow transition hover:bg-cta-hover"
-                href="/contact"
+                href="/request-quotation"
               >
-                Diskusikan Kebutuhan Anda
+                Minta Penawaran Pompa
               </Link>
               <Link
                 className="inline-flex h-14 items-center justify-center rounded-lg border border-white/30 bg-white/10 px-6 text-base font-medium uppercase tracking-[0.08em] text-white transition hover:bg-white/20"
@@ -120,6 +151,24 @@ export default async function HomePage() {
         </Shell>
       </section>
 
+      {/* Trusted Sectors */}
+      <section className="border-y border-bms-divider bg-white py-12">
+        <Shell>
+          <div className="flex flex-col items-center gap-6">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-bms-secondary text-center">
+              Telah Dipercaya Oleh Berbagai Sektor Industri
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 md:gap-8">
+              {trustedSectors.map((sector) => (
+                <div key={sector} className="px-4 py-2 rounded-full border border-bms-divider bg-bms-bg text-sm font-medium text-bms-primary">
+                  {sector}
+                </div>
+              ))}
+            </div>
+          </div>
+        </Shell>
+      </section>
+
       <section className="border-y border-bms-divider bg-bms-section py-24">
         <Shell className="grid gap-12 md:grid-cols-2 items-center">
           <div className="relative aspect-square w-full overflow-hidden rounded-xl border border-primary/10">
@@ -137,18 +186,47 @@ export default async function HomePage() {
               eyebrow="Tentang Kami"
               title="Bukan sekadar menjual unit, tetapi menyiapkan sistem"
             />
-            <div className="grid gap-4">
+            <div className="grid gap-6">
               {portfolioHighlights.map((highlight) => (
                 <div
                   className="rounded-xl border border-bms-divider bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
-                  key={highlight}
+                  key={highlight.title}
                 >
-                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-                    Nilai Perusahaan
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-2">
+                    Case Study
                   </p>
-                  <h3 className="mt-2 font-display text-2xl uppercase tracking-[0.08em] text-bms-primary">
-                    {highlight}
+                  <h3 className="font-display text-xl uppercase tracking-[0.08em] text-bms-primary mb-4">
+                    {highlight.title}
                   </h3>
+                  <div className="space-y-2 text-sm text-bms-secondary">
+                    <p><strong className="text-bms-primary">Klien:</strong> {highlight.client}</p>
+                    <p><strong className="text-bms-primary">Masalah:</strong> {highlight.problem}</p>
+                    <p><strong className="text-bms-primary">Solusi:</strong> {highlight.solution}</p>
+                    <p><strong className="text-cta">Hasil:</strong> {highlight.result}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Shell>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="bg-bms-bg py-24">
+        <Shell>
+          <div className="grid gap-12 md:grid-cols-2">
+            <div>
+              <SectionHeading
+                description="Sebagai mitra pengadaan dan servis, kami memastikan setiap klien mendapatkan rekomendasi teknis yang efisien dan tidak over-spec."
+                eyebrow="Mengapa Kami?"
+                title="Mengapa Memilih PT Mandiri Delta Teknik?"
+              />
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {whyChooseUs.map((reason, i) => (
+                <div key={i} className="flex items-center gap-3 p-4 rounded-lg bg-white border border-bms-divider shadow-sm">
+                  <ShieldCheck className="h-5 w-5 text-cta shrink-0" />
+                  <span className="text-sm font-medium text-bms-primary">{reason}</span>
                 </div>
               ))}
             </div>
@@ -205,10 +283,10 @@ export default async function HomePage() {
               </h2>
             </div>
             <Link
-              className="inline-flex h-14 items-center justify-center rounded-full bg-primary px-6 text-base font-medium uppercase tracking-[0.08em] text-white shadow-glow transition hover:bg-primary/90"
-              href="/contact"
+              className="inline-flex h-14 items-center justify-center rounded-full bg-primary px-6 text-base font-medium uppercase tracking-[0.08em] text-white shadow-glow transition hover:bg-primary/90 whitespace-nowrap"
+              href="/request-quotation"
             >
-              Mulai Konsultasi
+              Minta Penawaran
             </Link>
           </Card>
         </Shell>

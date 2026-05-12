@@ -82,36 +82,46 @@ export function LayananMegaMenu() {
 }
 
 export function ProdukMegaMenu() {
-  const products = [
-    "POMPA EBARA", "POMPA LEO", "CMP MOTOR", "DIESEL FIRE PUMP",
-    "POMPA CNP", "POMPA SOUTHERN CROSS", "TECO MOTOR", "ELECTRIC FIRE PUMP",
-    "POMPA TORISHIMA", "POMPA FLUGO", "ABB MOTOR", "JOCKEY FIRE PUMP",
-    "POMPA GRUNDFOS", "POMPA DRAKOS", "SIEMENS MOTOR", "PANEL FIRE HYDRANT",
-    "POMPA CRI", "POMPA MCKARLEN", "YUEMA MOTOR", "PILLAR FIRE HYDRANT",
-    "POMPA TSURUMI", "POMPA KSB", "ELEKTRIM MOTOR", "BOX HYDRANT",
-    "POMPA HCP", "POMPA SHOWFOU", "FRANKLIN MOTOR", "SPRINKLER HYDRANT"
+  const categories = [
+    {
+      title: "Pompa Industri",
+      items: ["Pompa Ebara", "Pompa Grundfos", "Pompa Torishima", "Pompa CNP", "Pompa Tsurumi", "Pompa KSB", "Pompa CRI"]
+    },
+    {
+      title: "Fire Hydrant System",
+      items: ["Diesel Fire Pump", "Electric Fire Pump", "Jockey Fire Pump", "Panel Fire Hydrant", "Box Hydrant", "Pillar Hydrant"]
+    },
+    {
+      title: "Electrical Panel & Motor",
+      items: ["Dinamo Motor TECO", "Dinamo Motor Siemens", "Dinamo Motor ABB", "Panel Star-Delta", "Panel Inverter (VSD)", "Panel Booster"]
+    }
   ];
 
   return (
-    <div className="absolute left-1/2 top-[calc(100%+1.5rem)] z-50 w-[1000px] -translate-x-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:top-[calc(100%+0rem)] transition-all duration-300 pointer-events-none group-hover:pointer-events-auto">
+    <div className="absolute left-1/2 top-[calc(100%+1.5rem)] z-50 w-[850px] -translate-x-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:top-[calc(100%+0rem)] transition-all duration-300 pointer-events-none group-hover:pointer-events-auto">
       <div className="pt-4">
         <div className="rounded-2xl bg-white p-8 shadow-glow border border-bms-divider ring-1 ring-black/5">
-          <div className="grid grid-cols-4 gap-y-4 gap-x-6">
-            {products.map((p, i) => (
-              <Link key={i} href={`/products/${p.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} className="group/item flex items-center gap-2 text-sm text-bms-primary hover:text-primary transition-colors">
-                <span className="text-primary/50 group-hover/item:text-primary transition-colors font-medium">›</span>
-                <span className="font-medium uppercase text-xs">{p}</span>
-              </Link>
-            ))}
+          <div className="flex items-center justify-between mb-6 pb-4 border-b border-bms-divider">
+            <h3 className="font-display font-bold uppercase tracking-wider text-bms-primary">Kategori Produk</h3>
+            <Link href="/products" className="text-xs font-bold uppercase tracking-wider text-primary hover:text-cta transition-colors">
+              Lihat Semua Produk →
+            </Link>
           </div>
-          <div className="mt-8 pt-6 border-t border-bms-divider">
-            <div className="text-center w-full">
-              <div className="flex flex-wrap justify-center items-center gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-                {["EBARA", "GRUNDFOS", "TORISHIMA", "CNP", "LEO", "SOUTHERN CROSS"].map(brand => (
-                  <span key={brand} className="font-display font-bold text-xl text-slate-800 tracking-wider">{brand}</span>
-                ))}
+          
+          <div className="grid grid-cols-3 gap-8">
+            {categories.map((cat, i) => (
+              <div key={i} className="space-y-4">
+                <h4 className="text-sm font-bold uppercase tracking-wider text-bms-secondary border-l-2 border-primary pl-2">{cat.title}</h4>
+                <div className="flex flex-col gap-3">
+                  {cat.items.map((item, j) => (
+                    <Link key={j} href={`/products/${item.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} className="group/item flex items-center gap-2 text-sm text-bms-primary hover:text-primary transition-colors">
+                      <span className="text-primary/40 group-hover/item:text-primary transition-colors text-lg leading-none mt-[2px]">›</span>
+                      <span>{item}</span>
+                    </Link>
+                  ))}
+                </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

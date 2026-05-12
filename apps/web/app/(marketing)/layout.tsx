@@ -1,5 +1,6 @@
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { FloatingWhatsApp } from "@/components/floating-whatsapp";
 
 export default function MarketingLayout({
   children
@@ -11,6 +12,7 @@ export default function MarketingLayout({
       <SiteHeader />
       {children}
       <SiteFooter />
+      <FloatingWhatsApp />
     </div>
   );
 }
