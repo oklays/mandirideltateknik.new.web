@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Card, Shell } from "@bms/ui";
+import { Card, Shell } from "@mdt/ui";
 
 export default function NotFound() {
   return (

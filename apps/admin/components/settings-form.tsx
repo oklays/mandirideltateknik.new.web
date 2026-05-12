@@ -3,9 +3,9 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
-import type { SiteSettings } from "@bms/lib";
-import { siteSettingsSchema } from "@bms/lib";
-import { Button, Card, Input, Textarea } from "@bms/ui";
+import type { SiteSettings } from "@mdt/lib";
+import { siteSettingsSchema } from "@mdt/lib";
+import { Button, Card, Input, Textarea } from "@mdt/ui";
 
 type SettingsFormProps = {
   settings: SiteSettings;

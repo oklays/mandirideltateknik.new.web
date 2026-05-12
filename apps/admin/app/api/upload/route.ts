@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { createServiceRoleClient, getEnv, hasServiceRoleEnv } from "@bms/lib";
+import { createServiceRoleClient, getEnv, hasServiceRoleEnv } from "@mdt/lib";
 import { getCurrentAdminContext } from "@/lib/auth";
 
 export async function POST(request: Request) {

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { getSiteSettings } from "@bms/lib";
-import { Shell } from "@bms/ui";
+import { getSiteSettings } from "@mdt/lib";
+import { Shell } from "@mdt/ui";
 import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin } from "lucide-react";
 
 export async function SiteFooter() {

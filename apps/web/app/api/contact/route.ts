@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-import { submitContact } from "@bms/lib";
-import { contactFormSchema } from "@bms/lib";
+import { submitContact } from "@mdt/lib";
+import { contactFormSchema } from "@mdt/lib";
 
 export async function POST(request: Request) {
   try {

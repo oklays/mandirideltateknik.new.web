@@ -1,5 +1,5 @@
-import { getSiteSettings } from "@bms/lib";
-import { Card, SectionHeading, Shell } from "@bms/ui";
+import { getSiteSettings } from "@mdt/lib";
+import { Card, SectionHeading, Shell } from "@mdt/ui";
 
 const values = [
   {

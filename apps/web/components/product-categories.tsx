@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Clock } from "lucide-react";
-import { Shell } from "@bms/ui";
+import { Shell } from "@mdt/ui";
 
 const categories = [
   {

@@ -3,9 +3,9 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
-import type { Category, CategoryInput } from "@bms/lib";
-import { categorySchema, slugify } from "@bms/lib";
-import { Button, Card, Input } from "@bms/ui";
+import type { Category, CategoryInput } from "@mdt/lib";
+import { categorySchema, slugify } from "@mdt/lib";
+import { Button, Card, Input } from "@mdt/ui";
 
 type CategoryManagerProps = {
   categories: Category[];

@@ -1,4 +1,4 @@
-import { getCategories } from "@bms/lib";
+import { getCategories } from "@mdt/lib";
 import { CategoryManager } from "@/components/category-manager";
 
 export default async function CategoriesAdminPage() {

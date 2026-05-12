@@ -1,5 +1,5 @@
 {
-  "name": "@bms/admin",
+  "name": "@mdt/admin",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "@supabase/ssr": "^0.6.1",
-    "@bms/lib": "workspace:*",
-    "@bms/ui": "workspace:*",
+    "@mdt/lib": "workspace:*",
+    "@mdt/ui": "workspace:*",
     "lucide-react": "^0.510.0",
     "next": "^15.2.4",
     "react": "^19.0.0",

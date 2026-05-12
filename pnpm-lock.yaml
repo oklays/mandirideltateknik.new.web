@@ -23,10 +23,10 @@ importers:
 
   apps/admin:
     dependencies:
-      '@bms/lib':
+      '@mdt/lib':
         specifier: workspace:*
         version: link:../../packages/lib
-      '@bms/ui':
+      '@mdt/ui':
         specifier: workspace:*
         version: link:../../packages/ui
       '@supabase/ssr':
@@ -75,10 +75,10 @@ importers:
 
   apps/web:
     dependencies:
-      '@bms/lib':
+      '@mdt/lib':
         specifier: workspace:*
         version: link:../../packages/lib
-      '@bms/ui':
+      '@mdt/ui':
         specifier: workspace:*
         version: link:../../packages/ui
       lucide-react:

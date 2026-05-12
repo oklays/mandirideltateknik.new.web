@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat, Plus_Jakarta_Sans } from "next/font/google";
-import { getSiteSettings } from "@bms/lib";
+import { getSiteSettings } from "@mdt/lib";
 import "./globals.css";
 import { FloatingWhatsApp } from "../components/floating-whatsapp";
 

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, ShieldCheck, Wrench } from "lucide-react";
-import { getFeaturedServices, getPublishedBlogPosts, getSiteSettings } from "@bms/lib";
-import { Badge, Card, SectionHeading, Shell } from "@bms/ui";
+import { getFeaturedServices, getPublishedBlogPosts, getSiteSettings } from "@mdt/lib";
+import { Badge, Card, SectionHeading, Shell } from "@mdt/ui";
 import { PromoSlider } from "../../components/promo-slider";
 import { ProductCategories } from "../../components/product-categories";
 import { PortfolioCarousel } from "../../components/portfolio-carousel";

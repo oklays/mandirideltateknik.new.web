@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { categorySchema, deleteCategory, upsertCategory } from "@bms/lib";
+import { categorySchema, deleteCategory, upsertCategory } from "@mdt/lib";
 import { getCurrentAdminContext } from "@/lib/auth";
 
 export async function POST(request: Request) {

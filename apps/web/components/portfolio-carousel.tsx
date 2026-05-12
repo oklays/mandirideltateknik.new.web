@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { Card, SectionHeading, Shell } from "@bms/ui";
+import { Card, SectionHeading, Shell } from "@mdt/ui";
 
 const portfolioItems = [
   {

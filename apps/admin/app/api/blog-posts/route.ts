@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { blogPostSchema, deleteBlogPost, upsertBlogPost } from "@bms/lib";
+import { blogPostSchema, deleteBlogPost, upsertBlogPost } from "@mdt/lib";
 import { getCurrentAdminContext } from "@/lib/auth";
 
 export async function POST(request: Request) {

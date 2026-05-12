@@ -3,8 +3,8 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { createBrowserSupabaseClient, hasPublicSupabaseEnv } from "@bms/lib";
-import { Button, Card, Input } from "@bms/ui";
+import { createBrowserSupabaseClient, hasPublicSupabaseEnv } from "@mdt/lib";
+import { Button, Card, Input } from "@mdt/ui";
 
 export function LoginForm() {
   const router = useRouter();

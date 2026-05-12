@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true
   },
-  transpilePackages: ["@bms/lib", "@bms/ui"]
+  transpilePackages: ["@mdt/lib", "@mdt/ui"]
 };
 
 export default nextConfig;

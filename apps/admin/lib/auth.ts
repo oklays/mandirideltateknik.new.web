@@ -1,6 +1,6 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
-import { createServerSupabaseClient, getProfileById, hasPublicSupabaseEnv } from "@bms/lib";
+import { createServerSupabaseClient, getProfileById, hasPublicSupabaseEnv } from "@mdt/lib";
 
 export async function getCurrentAdminContext() {
   if (!hasPublicSupabaseEnv()) {

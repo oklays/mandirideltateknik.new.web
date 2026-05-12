@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import type { ContactFormInput } from "@bms/lib";
-import { contactFormSchema } from "@bms/lib";
-import { Button, Card, Input, Textarea } from "@bms/ui";
+import type { ContactFormInput } from "@mdt/lib";
+import { contactFormSchema } from "@mdt/lib";
+import { Button, Card, Input, Textarea } from "@mdt/ui";
 
 type FormState = {
   status: "idle" | "success" | "error";

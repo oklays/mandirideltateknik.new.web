@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { getPublicServices } from "@bms/lib";
-import { Card, SectionHeading, Shell } from "@bms/ui";
+import { getPublicServices } from "@mdt/lib";
+import { Card, SectionHeading, Shell } from "@mdt/ui";
 
 export default async function ServicesPage() {
   const services = await getPublicServices();

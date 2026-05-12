@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { formatDate, getCategories, getPublishedBlogPosts } from "@bms/lib";
-import { Card, SectionHeading, Shell } from "@bms/ui";
+import { formatDate, getCategories, getPublishedBlogPosts } from "@mdt/lib";
+import { Card, SectionHeading, Shell } from "@mdt/ui";
 
 export default async function BlogPage() {
   const [categories, posts] = await Promise.all([getCategories(), getPublishedBlogPosts()]);

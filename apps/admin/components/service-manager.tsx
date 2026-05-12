@@ -3,9 +3,9 @@
 import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
-import type { Service, ServiceInput } from "@bms/lib";
-import { serviceSchema, slugify } from "@bms/lib";
-import { Button, Card, Input, Textarea } from "@bms/ui";
+import type { Service, ServiceInput } from "@mdt/lib";
+import { serviceSchema, slugify } from "@mdt/lib";
+import { Button, Card, Input, Textarea } from "@mdt/ui";
 
 type ServiceManagerProps = {
   services: Service[];

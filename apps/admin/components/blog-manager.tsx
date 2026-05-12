@@ -3,9 +3,9 @@
 import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
-import type { BlogPost, BlogPostInput, Category } from "@bms/lib";
-import { blogPostSchema, slugify } from "@bms/lib";
-import { Button, Card, Input, Textarea } from "@bms/ui";
+import type { BlogPost, BlogPostInput, Category } from "@mdt/lib";
+import { blogPostSchema, slugify } from "@mdt/lib";
+import { Button, Card, Input, Textarea } from "@mdt/ui";
 import { RichTextEditor } from "./rich-text-editor";
 
 type BlogManagerProps = {

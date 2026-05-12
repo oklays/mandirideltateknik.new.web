@@ -1,4 +1,4 @@
-import { Shell } from "@bms/ui";
+import { Shell } from "@mdt/ui";
 
 export default function Loading() {
   return (

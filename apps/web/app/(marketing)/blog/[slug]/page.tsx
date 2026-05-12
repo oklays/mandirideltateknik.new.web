@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { formatDate, getBlogPostBySlug, getPublishedBlogPosts } from "@bms/lib";
-import { Card, Shell } from "@bms/ui";
+import { formatDate, getBlogPostBySlug, getPublishedBlogPosts } from "@mdt/lib";
+import { Card, Shell } from "@mdt/ui";
 
 type PageProps = {
   params: Promise<{ slug: string }>;

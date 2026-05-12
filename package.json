@@ -5,8 +5,8 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
-    "dev:web": "turbo run dev --filter=@bms/web",
-    "dev:admin": "turbo run dev --filter=@bms/admin",
+    "dev:web": "turbo run dev --filter=@mdt/web",
+    "dev:admin": "turbo run dev --filter=@mdt/admin",
     "lint": "turbo run lint",
     "typecheck": "turbo run typecheck"
   },

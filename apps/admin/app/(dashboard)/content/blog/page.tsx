@@ -1,4 +1,4 @@
-import { getAllBlogPosts, getCategories } from "@bms/lib";
+import { getAllBlogPosts, getCategories } from "@mdt/lib";
 import { BlogManager } from "@/components/blog-manager";
 
 export default async function BlogAdminPage() {

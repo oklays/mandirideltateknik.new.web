@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { serviceSchema, upsertService, deleteService } from "@bms/lib";
+import { serviceSchema, upsertService, deleteService } from "@mdt/lib";
 import { getCurrentAdminContext } from "@/lib/auth";
 
 export async function POST(request: Request) {

@@ -1,4 +1,4 @@
-import { getSiteSettings } from "@bms/lib";
+import { getSiteSettings } from "@mdt/lib";
 import { SettingsForm } from "@/components/settings-form";
 
 export default async function SettingsPage() {

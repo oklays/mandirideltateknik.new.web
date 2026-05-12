@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-import { Shell, SectionHeading, Card } from "@bms/ui";
+import { Shell, SectionHeading, Card } from "@mdt/ui";
 
 // Mock data to handle dynamic product categories
 // If admin adds new categories, they can be matched here or fetched from a CMS/DB

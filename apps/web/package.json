@@ -1,5 +1,5 @@
 {
-  "name": "@bms/web",
+  "name": "@mdt/web",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -9,8 +9,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@bms/lib": "workspace:*",
-    "@bms/ui": "workspace:*",
+    "@mdt/lib": "workspace:*",
+    "@mdt/ui": "workspace:*",
     "lucide-react": "^0.510.0",
     "next": "^15.2.4",
     "react": "^19.0.0",

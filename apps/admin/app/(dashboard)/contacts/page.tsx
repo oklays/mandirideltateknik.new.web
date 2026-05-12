@@ -1,5 +1,5 @@
-import { formatDate, getContacts } from "@bms/lib";
-import { Card } from "@bms/ui";
+import { formatDate, getContacts } from "@mdt/lib";
+import { Card } from "@mdt/ui";
 
 export default async function ContactsPage() {
   const contacts = await getContacts();

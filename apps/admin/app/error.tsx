@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Card } from "@bms/ui";
+import { Button, Card } from "@mdt/ui";
 
 export default function Error({
   error,

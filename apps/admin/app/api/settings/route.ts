@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { siteSettingsSchema, updateSiteSettings } from "@bms/lib";
+import { siteSettingsSchema, updateSiteSettings } from "@mdt/lib";
 import { getCurrentAdminContext } from "@/lib/auth";
 
 export async function PUT(request: Request) {

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Shell } from "@bms/ui";
+import { Shell } from "@mdt/ui";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { LayananMegaMenu, ProdukMegaMenu } from "./mega-menus";
 

@@ -1,5 +1,5 @@
-import { getDashboardSummary } from "@bms/lib";
-import { Card } from "@bms/ui";
+import { getDashboardSummary } from "@mdt/lib";
+import { Card } from "@mdt/ui";
 
 export default async function DashboardPage() {
   const summary = await getDashboardSummary();
