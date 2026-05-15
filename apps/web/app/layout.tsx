@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Montserrat, Plus_Jakarta_Sans } from "next/font/google";
 import { getSiteSettings } from "@mdt/lib";
+import { Suspense } from "react";
 import "./globals.css";
 import { FloatingWhatsApp } from "../components/floating-whatsapp";
+import { GoogleAnalytics } from "../components/google-analytics";
 
 const displayFont = Montserrat({
   subsets: ["latin"],
@@ -48,6 +50,9 @@ export default function RootLayout({
   return (
     <html className={`${displayFont.variable} ${bodyFont.variable}`} lang="id">
       <body>
+        <Suspense fallback={null}>
+          <GoogleAnalytics />
+        </Suspense>
         {children}
         <FloatingWhatsApp />
       </body>
