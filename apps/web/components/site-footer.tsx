@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { getSiteSettings } from "@mdt/lib";
 import { Shell } from "@mdt/ui";
-import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 
 export async function SiteFooter() {
   const settings = await getSiteSettings();
@@ -93,6 +93,9 @@ export async function SiteFooter() {
             </a>
             <a href="#" aria-label="Twitter" className="flex h-8 w-8 items-center justify-center rounded-full border border-slate-700 text-slate-400 hover:border-slate-400 hover:text-white transition-all">
               <Twitter className="h-3.5 w-3.5" />
+            </a>
+            <a href="https://www.instagram.com/official.mdt.marketing/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="flex h-8 w-8 items-center justify-center rounded-full border border-slate-700 text-slate-400 hover:border-slate-400 hover:text-white transition-all">
+              <Instagram className="h-3.5 w-3.5" />
             </a>
             <a href="#" aria-label="LinkedIn" className="flex h-8 w-8 items-center justify-center rounded-full border border-slate-700 text-slate-400 hover:border-slate-400 hover:text-white transition-all">
               <Linkedin className="h-3.5 w-3.5" />

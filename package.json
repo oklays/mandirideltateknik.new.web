@@ -8,7 +8,11 @@
     "dev:web": "turbo run dev --filter=@mdt/web",
     "dev:admin": "turbo run dev --filter=@mdt/admin",
     "lint": "turbo run lint",
-    "typecheck": "turbo run typecheck"
+    "typecheck": "turbo run typecheck",
+    "db:generate": "turbo run db:generate",
+    "db:push": "turbo run db:push",
+    "db:studio": "turbo run db:studio",
+    "db:pull": "turbo run db:pull"
   },
   "devDependencies": {
     "eslint": "^9.25.1",
