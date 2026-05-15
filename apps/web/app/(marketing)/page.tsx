@@ -5,6 +5,7 @@ import { Badge, Card, SectionHeading, Shell } from "@mdt/ui";
 import { PromoSlider } from "../../components/promo-slider";
 import { ProductCategories } from "../../components/product-categories";
 import { PortfolioCarousel } from "../../components/portfolio-carousel";
+import { TestimonialsCarousel } from "../../components/testimonials-carousel";
 
 const proofPoints = [
   "Supplier pompa industri multi-brand",
@@ -237,6 +238,8 @@ export default async function HomePage() {
       <ProductCategories />
 
       <PortfolioCarousel />
+
+      <TestimonialsCarousel />
 
       <section className="bg-bms-bg py-24">
         <Shell className="space-y-12">

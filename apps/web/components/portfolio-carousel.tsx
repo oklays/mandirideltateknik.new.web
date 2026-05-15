@@ -8,26 +8,20 @@ import { Card, SectionHeading, Shell } from "@mdt/ui";
 const portfolioItems = [
   {
     id: 1,
-    title: "Penguatan Sistem Pompa Gedung Komersial",
-    category: "Instalasi Pompa",
-    image: "/background-1-1.png",
-  },
-  {
-    id: 2,
-    title: "Peremajaan Fire Pump dan Panel Hydrant",
-    category: "Fire Hydrant System",
-    image: "/background-1-1.png",
-  },
-  {
-    id: 3,
-    title: "Servis Pompa Utilitas untuk Fasilitas Industri",
+    title: "Maintenance Pompa",
     category: "Servis & Maintenance",
     image: "/background-1-1.png",
   },
   {
-    id: 4,
-    title: "Instalasi Panel Kontrol Pompa Submersible",
-    category: "Electrical Panel",
+    id: 2,
+    title: "Pemasangan dan instalasi",
+    category: "Instalasi & Plumbing",
+    image: "/background-1-1.png",
+  },
+  {
+    id: 3,
+    title: "Pengadaan Pompa Air",
+    category: "Procurement",
     image: "/background-1-1.png",
   }
 ];
