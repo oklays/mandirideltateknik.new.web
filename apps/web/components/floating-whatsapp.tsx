@@ -15,11 +15,14 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
 );
 
 export function FloatingWhatsApp() {
-  const trackClick = (label: string) => {
-    gtag.event({
-      action: "click_whatsapp",
-      category: "engagement",
-      label: label,
+  const trackClick = (name: string, phone: string) => {
+    gtag.event("contact", {
+      method: "WhatsApp",
+      contact_name: name,
+      phone_number: phone,
+      event_category: "engagement",
+      event_label: `${name} (${phone})`,
+      transport_type: "beacon",
     });
   };
 
@@ -32,7 +35,7 @@ export function FloatingWhatsApp() {
         href="https://wa.me/6289652480933"
         target="_blank"
         rel="noopener noreferrer"
-        onClick={() => trackClick("Sales Engineering 1")}
+        onClick={() => trackClick("Sales Engineering 1", "6289652480933")}
         className="group flex items-center justify-end gap-3"
       >
         <span className="scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300 origin-right bg-white text-bms-primary text-xs font-semibold px-3 py-1.5 rounded-lg shadow-md border border-bms-divider">
@@ -47,7 +50,7 @@ export function FloatingWhatsApp() {
         href="https://wa.me/6285811111856"
         target="_blank"
         rel="noopener noreferrer"
-        onClick={() => trackClick("Sales Engineering 2")}
+        onClick={() => trackClick("Sales Engineering 2", "6285811111856")}
         className="group flex items-center justify-end gap-3"
       >
         <span className="scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300 origin-right bg-white text-bms-primary text-xs font-semibold px-3 py-1.5 rounded-lg shadow-md border border-bms-divider">
@@ -62,7 +65,7 @@ export function FloatingWhatsApp() {
         href="https://wa.me/6281217241737"
         target="_blank"
         rel="noopener noreferrer"
-        onClick={() => trackClick("Sales Engineering 3")}
+        onClick={() => trackClick("Sales Engineering 3", "6281217241737")}
         className="group flex items-center justify-end gap-3"
       >
         <span className="scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300 origin-right bg-white text-bms-primary text-xs font-semibold px-3 py-1.5 rounded-lg shadow-md border border-bms-divider">
