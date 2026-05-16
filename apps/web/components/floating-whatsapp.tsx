@@ -16,13 +16,22 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
 
 export function FloatingWhatsApp() {
   const trackClick = (name: string, phone: string) => {
+    // Push to GTM dataLayer so Custom Event trigger fires in GTM
+    if (typeof window !== "undefined" && (window as any).dataLayer) {
+      (window as any).dataLayer.push({
+        event: "whatsapp_click",
+        contact_name: name,
+        phone_number: phone,
+        event_label: `${name} (${phone})`,
+      });
+    }
+    // Also send directly to GA4
     gtag.event("whatsapp_click", {
       method: "WhatsApp",
       contact_name: name,
       phone_number: phone,
       event_category: "engagement",
       event_label: `${name} (${phone})`,
-      transport_type: "beacon",
     });
   };
 
@@ -32,6 +41,7 @@ export function FloatingWhatsApp() {
         Butuh bantuan? Chat kami!
       </div>
       <Link
+        id="whatsapp-se-1"
         href="https://wa.me/6289652480933"
         target="_blank"
         rel="noopener noreferrer"
@@ -47,6 +57,7 @@ export function FloatingWhatsApp() {
       </Link>
 
       <Link
+        id="whatsapp-se-2"
         href="https://wa.me/6285811111856"
         target="_blank"
         rel="noopener noreferrer"
@@ -62,6 +73,7 @@ export function FloatingWhatsApp() {
       </Link>
 
       <Link
+        id="whatsapp-se-3"
         href="https://wa.me/6281217241737"
         target="_blank"
         rel="noopener noreferrer"
