@@ -16,7 +16,7 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
 
 export function FloatingWhatsApp() {
   const trackClick = (name: string, phone: string) => {
-    gtag.event("contact", {
+    gtag.event("whatsapp_click", {
       method: "WhatsApp",
       contact_name: name,
       phone_number: phone,
